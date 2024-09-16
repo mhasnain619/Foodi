@@ -11,19 +11,22 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import styled from '@emotion/styled'; // This is correct
-import { createTheme } from '@mui/material/styles';
-
+import WifiCalling3RoundedIcon from '@mui/icons-material/WifiCalling3Rounded'; import styled from '@emotion/styled'; // This is correct
+import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import logo from '../assets/logo.jpeg'
 const Root = styled(Box)(({ theme }) => ({
     "& .MuiPaper-root": {
         backgroundColor: "#FAFAFA",
         color: "gray"
-    }
+    },
+    "& .MuiBox-root": {
+        justifyContent: "center",
+        gap: "50px"
+    },
 
 }));
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Menu', 'Services', 'Offers'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -54,7 +57,7 @@ function ResponsiveAppBar() {
                             variant="h6"
                             noWrap
                             component="a"
-                            href="#app-bar-with-responsive-menu"
+                            href=""
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -68,7 +71,7 @@ function ResponsiveAppBar() {
                             <img src={logo} alt="" />
                         </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: "center" }}>
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
@@ -101,6 +104,7 @@ function ResponsiveAppBar() {
                                     </MenuItem>
                                 ))}
                             </Menu>
+
                         </Box>
                         <Typography
                             variant="h5"
@@ -121,16 +125,29 @@ function ResponsiveAppBar() {
                             <img src={logo} alt="" />
 
                         </Typography>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center" }}>
                             {pages.map((page) => (
-                                <Button
+                                <Typography
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     {page}
-                                </Button>
+                                </Typography>
                             ))}
+                            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                <SearchRoundedIcon sx={{ color: "#000" }} />
+                                <WorkOutlineRoundedIcon sx={{ color: "#000" }} />
+                                <Button sx={{
+                                    padding: "10px 25px",
+                                    backgroundColor: "#3ADA4C",
+                                    borderRadius: "30px",
+                                    textTransform: "none"
+                                }} variant='contained'>
+                                    <WifiCalling3RoundedIcon />
+                                    Order Now
+                                </Button>
+                            </Box>
                         </Box>
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">

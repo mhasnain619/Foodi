@@ -6,6 +6,7 @@ import heart from '../assets/heart.png'; // Adjust the path to the logo
 import girl from '../assets/girl.png'; // Adjust the path to the logo
 import salad from '../assets/salad.png'; // Adjust the path to the logo
 import cup from '../assets/cup.png'; // Adjust the path to the logo
+import ha from '../assets/ha.jpg'; // Adjust the path to the logo
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StarIcon from '@mui/icons-material/Star';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -88,7 +89,21 @@ const HeroSection = () => {
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
-                            <img width="100%" src={intersect} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
+                            <img width="100%" src={ha} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
+                            <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>Main Dish</Typography>
+                            <Typography>(86 dishes)</Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={3} container alignItems="center" justifyContent="center">
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", flexDirection: "column",
+                            height: "300px", width: "300px",
+                            borderRadius: "15px",
+                            boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
+                        }}>
+                            <img width="100%" src={ha} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
                             <Typography>Main Dish</Typography>
                             <Typography>(86 dishes)</Typography>
                         </Box>
@@ -102,7 +117,7 @@ const HeroSection = () => {
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
-                            <img width="100%" src={intersect} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
+                            <img width="100%" src={ha} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
                             <Typography>Main Dish</Typography>
                             <Typography>(86 dishes)</Typography>
                         </Box>
@@ -116,21 +131,7 @@ const HeroSection = () => {
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
-                            <img width="100%" src={intersect} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
-                            <Typography>Main Dish</Typography>
-                            <Typography>(86 dishes)</Typography>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} md={3} container alignItems="center" justifyContent="center">
-                        <Box sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center", flexDirection: "column",
-                            height: "300px", width: "300px",
-                            borderRadius: "15px",
-                            boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
-                        }}>
-                            <img width="100%" src={intersect} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
+                            <img width="100%" src={ha} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
                             <Typography>Main Dish</Typography>
                             <Typography>(86 dishes)</Typography>
                         </Box>

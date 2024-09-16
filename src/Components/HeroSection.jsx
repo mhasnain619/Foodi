@@ -2,7 +2,10 @@ import * as React from 'react';
 import { Grid, Box, Typography, Button } from '@mui/material'; // Import Grid
 import styled from '@emotion/styled';
 import intersect from '../assets/hmm.jpeg'; // Adjust the path to the logo
+import heart from '../assets/heart.png'; // Adjust the path to the logo
+import salad from '../assets/salad.png'; // Adjust the path to the logo
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import StarIcon from '@mui/icons-material/Star';
 const Root = styled(Box)(({ theme }) => ({
     "& .root": {
         backgroundColor: "#FAFAFA",
@@ -77,7 +80,7 @@ const HeroSection = () => {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center", flexDirection: "column",
-                            height: "200px", width: "200px",
+                            height: "300px", width: "300px",
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
@@ -91,7 +94,7 @@ const HeroSection = () => {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center", flexDirection: "column",
-                            height: "200px", width: "200px",
+                            height: "300px", width: "300px",
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
@@ -105,7 +108,7 @@ const HeroSection = () => {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center", flexDirection: "column",
-                            height: "200px", width: "200px",
+                            height: "300px", width: "300px",
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
@@ -119,13 +122,132 @@ const HeroSection = () => {
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center", flexDirection: "column",
-                            height: "200px", width: "200px",
+                            height: "300px", width: "300px",
                             borderRadius: "15px",
                             boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
                         }}>
                             <img width="100%" src={intersect} alt="" style={{ maxWidth: '100px', height: 'auto' }} />
                             <Typography>Main Dish</Typography>
                             <Typography>(86 dishes)</Typography>
+                        </Box>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6} container alignItems="center" justifyContent="center">
+                        <Box>
+                            <Typography sx={{ color: "red" }}>
+                                SPECIAL DISHES
+                            </Typography>
+                            <Typography sx={{ textAlign: "", fontSize: { xs: "32px", md: "45px" }, fontWeight: "900" }}>
+                                Standout Dishes From Our Menu
+                            </Typography>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} container alignItems="center" justifyContent="end">
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", height: "50px",
+                            width: "50px", backgroundColor: "#fff",
+                            boxShadow: "rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px;",
+                            borderRadius: "50px"
+                        }}>
+                            <PlayArrowIcon />
+                        </Box>
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", height: "50px",
+                            width: "50px", backgroundColor: "#fff",
+                            boxShadow: "rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px;",
+                            borderRadius: "50px"
+                        }}>
+                            <PlayArrowIcon />
+                        </Box>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={4} container alignItems="center" justifyContent="center">
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", flexDirection: "column",
+                            height: "400px", width: "400px",
+                            borderRadius: "35px",
+                            boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
+                        }}>
+                            <img width="100%" src={heart} alt="" style={{ position: "relative", bottom: "55px", left: "153px", maxWidth: '100px', height: 'auto' }} />
+                            <Box sx={{ marginTop: "-70px" }}>
+                                <img width="100%" src={salad} alt="" style={{ maxWidth: '200px', height: 'auto' }} />
+                                <Typography>Fattoush salad</Typography>
+                                <Typography>Description of the item</Typography>
+                                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                                    <Typography>
+                                        $24.00
+                                    </Typography>
+                                    <Typography>
+                                        <StarIcon />
+                                        4.6
+                                    </Typography>
+
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={4} container alignItems="center" justifyContent="end">
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", flexDirection: "column",
+                            height: "400px", width: "400px",
+                            borderRadius: "35px",
+                            boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
+                        }}>
+                            <img width="100%" src={heart} alt="" style={{ position: "relative", bottom: "55px", left: "153px", maxWidth: '100px', height: 'auto' }} />
+                            <Box sx={{ marginTop: "-70px" }}>
+                                <img width="100%" src={salad} alt="" style={{ maxWidth: '200px', height: 'auto' }} />
+                                <Typography>Fattoush salad</Typography>
+                                <Typography>Description of the item</Typography>
+                                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                                    <Typography>
+                                        $24.00
+                                    </Typography>
+                                    <Typography>
+                                        <StarIcon />
+                                        4.6
+                                    </Typography>
+
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={4} container alignItems="center" justifyContent="end">
+                        <Box sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center", flexDirection: "column",
+                            height: "400px", width: "400px",
+                            borderRadius: "35px",
+                            boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;"
+                        }}>
+                            <img width="100%" src={heart} alt="" style={{ position: "relative", bottom: "55px", left: "153px", maxWidth: '100px', height: 'auto' }} />
+                            <Box sx={{ marginTop: "-70px" }}>
+                                <img width="100%" src={salad} alt="" style={{ maxWidth: '200px', height: 'auto' }} />
+                                <Typography>Fattoush salad</Typography>
+                                <Typography>Description of the item</Typography>
+                                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                                    <Typography>
+                                        $24.00
+                                    </Typography>
+                                    <Typography>
+                                        <StarIcon />
+                                        4.6
+                                    </Typography>
+
+                                </Box>
+                            </Box>
                         </Box>
                     </Grid>
                 </Grid>
